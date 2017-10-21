@@ -1,0 +1,14 @@
+/*
+ * Hitender Prakash
+ * References: https://github.com/01org/linux-sgx/tree/master/SampleCode
+ * Enclave defination 
+ * Contains only one trusted function
+ */
+
+enclave {
+	
+	trusted {
+		public void ecall_random([out, count=1] int* num);
+	};
+
+};

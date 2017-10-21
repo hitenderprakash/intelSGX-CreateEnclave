@@ -40,10 +40,10 @@ int SGX_CDECL main(int argc, char *argv[])
     }
     
     //driver code - To test if Enclave is created and function from enclave can be called
-    int secret=0;
+    int secret=6;
     printf("\nIninitialized value of secret: %d\n",secret);
-    ecall_random(enclave_id,&secret);
-    printf("\nValue of secret set by Enclave: %d\n",secret);
+    ecall_random(enclave_id,&secret);//call to enclave function
+    printf("\nValue of secret after increment by Enclave function : %d\n",secret);
     sgx_destroy_enclave(enclave_id);    
     printf("\nEnclave successfully returned.\n");
     return 0;

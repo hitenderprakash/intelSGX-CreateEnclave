@@ -8,7 +8,7 @@
 enclave {
 	
 	trusted {
-		public void ecall_random([out, count=1] int* num);
+		public void ecall_random([in,out, count=1] int* num);
 	};
 
 };

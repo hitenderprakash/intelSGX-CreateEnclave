@@ -10,5 +10,6 @@
 #include "Enclave_t.h"
 
 void ecall_random(int *num){
-	*num=5;
+	//now communication is bidirectional and enclave can access the value of num as set by untrusted part and write it back
+	*num+=5;//increment by 5
 }
